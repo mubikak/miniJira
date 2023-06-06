@@ -5,6 +5,7 @@ public class AccountBatch implements Database.batchable<sobject>, Database.state
         Database.QueryLocator acc = database.getQueryLocator([select id, name, description, active__c from account]);
         return acc;
     }
+    // muberra akbaba
     public void execute(Database.BatchableContext bc, list<account> listAcc){
         System.debug('Execute Method Started. ');
         list<account> updateAcc = new list<account>();
